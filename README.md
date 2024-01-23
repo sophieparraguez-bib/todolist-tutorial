@@ -1,5 +1,11 @@
 # [FR] Tutoriel "Todo list" pour débutants 😎
 
+## Disclaimer
+
+Ce tutoriel a été élaboré dans le cadre de ma participation au programme _**Numerique@Michelin - Mon stage 100% Filles**_, dont l'objectif est de sensibiliser les jeunes filles aux métiers du numérique.  
+Il est donc destiné à des débutants en développement, qui souhaitent apprendre à coder. L'objectif étant de créer une liste de tâches très simple en HTML, CSS et JavaScript.  
+Il est conçu pour être suivi pas à pas, en commençant par les bases et en ajoutant progressivement des fonctionnalités supplémentaires.
+
 ## 📝 Table des matières
 
 - [Environnement](#1-environnement)
@@ -7,10 +13,15 @@
 - [CSS](#3-css)
 - [Javascript](#4-javascript-js)
 - [Test](#5-test)
+- [Bonus 1](#6-bonus-1)
+- [Bonus 2](#7-bonus-2)
 
 ### **1. Environnement**
 
-Pour faire ce tutoriel, nul besoin d'installer quoique ce soit sur votre machine. Le projet est déjà initialisé et prêt à l'emploi. Il vous suffit de cliquer sur le lien suivant 👉 [Todo list](https://codepen.io/sophieparraguez-bib/pen/JjzyJwz) et de suivre les instructions ci-dessous.
+Pour faire ce tutoriel, nul besoin d'installer quoique ce soit sur votre machine.  
+Le projet est déjà initialisé et prêt à l'emploi. Il vous suffit d'ouvrir le lien suivant 👉 [Environnement live CodePen](https://codepen.io/sophieparraguez-bib/pen/JjzyJwz) et de suivre les instructions ci-dessous.
+
+> Pour ceux qui souhaitent en savoir plus, [CodePen](https://codepen.io/) est une plateforme en ligne qui permet de coder en mode bac à sable directement sur votre navigateur.
 
 Une fois le lien CodePen ouvert, vous verrez 3 fenêtres :
 
@@ -48,11 +59,13 @@ Explications des balises :
 
 Comme vous pouvez le voir dans l'aperçu, nous avons maintenant, un titre, un champ de saisie de texte ainsi qu'un bouton.
 Mais lorsque vous cliquez sur le bouton, rien ne se passe 😓  
-C'est parce que nous n'avons pas encore écrit la fonction en JavaScript. Pas d'inquiétudes, nous le ferons dans une prochaine étape 😎
+C'est parce que nous n'avons pas encore écrit la fonction en JavaScript. Pas d'inquiétude, nous le ferons dans une prochaine étape 😎
 
 ### **3. CSS**
 
-Ne serait-il pas plus agréable d'avoir une liste de tâches avec un peu de style ? Ajoutons donc le code CSS suivant :
+Ne serait-il pas plus agréable d'avoir une liste de tâches avec un peu de style ?  
+
+Ajoutons donc le code CSS suivant :
 
 ```css
 body {
@@ -123,9 +136,9 @@ Comme nous avons ajouter une classe css `container`, nous devons modifier le fic
 
 ```html
 <body>
-    // Ajouter la classe "container" 👇
+    <!-- Ajouter 'class="container"' 👇 -->
     <div class="container">
-    // 👆 Ajouter la classe "container" 
+    <!-- 👆 Ajouter 'class="container"' -->
         <h1>Liste de tâches</h1>
         <ul id="taskList"></ul>
         <input type="text" id="newTask" placeholder="Ajouter une nouvelle tâche">
@@ -136,7 +149,9 @@ Comme nous avons ajouter une classe css `container`, nous devons modifier le fic
 
 ### **4. JavaScript (JS)**
 
-Maintenant que nous avons une liste de tâches avec un peu de style, il est temps d'ajouter l'interaction. Ajoutons donc le code JavaScript suivant :
+Maintenant que nous avons une liste de tâches avec un peu de style, il est temps d'ajouter l'interactivité. 
+
+Ajoutons donc le code JavaScript suivant :
 
 ```javascript
 function addTask() {
@@ -174,20 +189,161 @@ Maintenant que nous avons écrit le code JavaScript, nous devons le lier à notr
         <h1>Liste de tâches</h1>
         <ul id="taskList"></ul>
         <input type="text" id="newTask" placeholder="Ajouter une nouvelle tâche">
-        // Ajouter l'attribut `onclick="addTask()"` 👇    
+        <!-- Ajouter 'onclick="addTask()"' 👇 -->  
         <button onclick="addTask()">Ajouter une tâche</button>
-        // 👆 l'attribut `onclick="addTask()"`
+        <!-- 👆 Ajouter 'onclick="addTask()"' -->
 
     </div>    
 </body>
 ```
 
-L'attribut `onclick` appelle la fonction `addTask` lorsque le bouton est cliqué, ce qui permet de faire fonctionner l'interaction pour l'utilisateur.
+L'attribut `onclick` appelle la fonction `addTask` lorsque le bouton est cliqué, ce qui permet de créer l'interaction pour l'utilisateur.
 
 ### **5. Test**
 
 Pour vérifier que tout fonctionne correctement, vous pouvez :
 
-- Essayez de taper une tâche dans le champ de saisie et cliquez sur "Ajouter une tâche" pour la voir ajoutée à la liste.
-- Essayez de cliquer sur "Ajouter une tâche" sans rien taper dans le champ de saisie pour voir que rien ne se passe.
-- Essayez de taper une tâche dans le champ de saisie et appuyez sur la touche "Entrée" pour voir que la tâche est ajoutée à la liste.
+- Essayer de taper une tâche dans le champ de saisie et cliquez sur "Ajouter une tâche" pour la voir ajoutée à la liste.
+- Essayer de cliquer sur "Ajouter une tâche" sans rien taper dans le champ de saisie pour voir que rien ne se passe.
+- Essayer de taper une tâche dans le champ de saisie et appuyez sur la touche "Entrée" pour voir que la tâche est ajoutée à la liste.
+
+Félicitations 🎉
+
+Vous avez terminé le tutoriel "Todo list" pour débutants 😎
+
+### **6. Bonus 1**
+
+Maintenant que vous avez terminé le tutoriel, vous souhaiter peut être ajouter une fonctionnalité supplémentaire à votre liste de tâches ?  
+Nous pouvons, par exemple, ajouter un bouton pour supprimer une tâche de la liste.
+
+Comme il s'agit d'une interaction utilisateur, nous allons devoir modifier le code Javascript pour lui ajouter une fonction "supprimer", puis faire le lien entre la fonction et l'interface utilisateur.
+
+Ajoutons le code JavaScript suivant à notre code existant :
+
+```javascript
+function addTask() {
+
+    const newTaskInput = document.getElementById("newTask");
+    const taskList = document.getElementById("taskList");
+    
+    if (newTaskInput.value !== "") {
+
+        const taskItem = document.createElement("li");
+        taskItem.textContent = newTaskInput.value;
+
+        // Ajouter ce code 👇
+        // Ajoute un bouton de suppression à chaque tâche dans le code HTML
+        taskItem.innerHTML += '<button id="deleteTask" onclick="deleteTask(this)">Supprimer</button>';
+        // 👆 Ajouter ce code
+
+        taskList.appendChild(taskItem);
+        newTaskInput.value = "";
+    }
+}
+
+// Ajouter ce code 👇
+function deleteTask(taskItem) {
+   const taskList = document.getElementById("taskList");
+   taskList.removeChild(taskItem.parentElement);
+}
+// 👆 Ajouter ce code 
+```
+
+Explications du code JavaScript :
+
+- **`taskItem.innerHTML += '<button onclick="deleteTask(this)">Supprimer</button>';` :** Ajoute un bouton de suppression directement dans le code HTML de la tâche en utilisant la propriété `innerHTML`. Le bouton appelle la fonction `deleteTask(this)` lorsqu’il est cliqué, en se passant lui-même comme paramètre (avec le mot clé `this`).
+- La fonction **`deleteTask(taskItem)`** est responsable de supprimer la tâche correspondante lorsque le bouton “Supprimer” est cliqué. Elle utilise `taskList.removeChild(taskItem.parentElement)`; pour retirer l’élément `<li>` parent de celui qui a déclenché la fonction (le bouton).
+
+>👋 En utilisant cette approche, le bouton “Supprimer” est généré directement dans le code HTML, ce qui peut rendre le code plus lisible et maintenable, tout en se rapprochant des techniques de développement web modernes (React, Vue etc..).
+
+### **7. Bonus 2**
+
+Maintenant que nous avons toutes ces fonctionnalités, nous pouvons essayer d'améliorer l'expérience utilisateur en jouant avec différents styles pour rendre la liste de tâches plus attrayante.   
+Pour cela nous allons modifier le code CSS que nous avons déjà écrit.
+
+1 - Modifiez la couleur de fond de la page (body):
+
+```css
+body {
+    /* ... Code existant non affiché */   
+    background-color: DarkSlateBlue;
+}
+```
+
+>👋 Les noms et code de couleurs HTML sont disponibles ici 👉 [HTML Noms de couleurs](https://htmlcolorcodes.com/fr/noms-de-couleur/)
+
+2 - Donnez une taille (fixe) au conteneur de la liste de tâches :
+
+```css
+.container {
+    /* ... Code existant non affiché */
+    width: 600px;
+}
+```
+
+3 - Changer la couleur du titre (h1) :
+
+```css
+h1 {
+    color: teal;
+}
+```
+
+4 - Remplacer le style des tâches et de la case de saisie de texte :
+
+```css
+li {
+   background-color: lavender; /* 👈 Changement de couleur de fond */
+   margin: 10px 0; /* 👈 Augmentation des marges extérieures */
+   padding: 10px; /* 👈 Augmentation des marges intérieures */
+   border-radius: 8px; /* 👈 Coins plus arrondis */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 👈 Ajout d'une ombre */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+input[type="text"] {
+   padding: 10px; /* 👈 Augmentation des marges intérieures */
+   margin-right: 10px; /* 👈 Augmentation de la marge extérieure droite */
+   border: 1px solid #ccc;
+   border-radius: 8px;
+}
+```
+
+5 - Remplacer le style du bouton d'ajout de tâche :
+
+```css
+button {
+   padding: 10px 20px; /* 👈 Augmentation des marges intérieures */
+   background-color: #008000; /* 👈 Changement de couleur de fond */
+   color: #fff;
+   border: none;
+   border-radius: 8px; /* 👈 Coins plus arrondis */
+   cursor: pointer;
+   transition: background-color 0.3s ease; /* 👈 Ajout d'une transition */
+}
+
+button:hover {
+   background-color: #006400; /* 👈 Changement de couleur de fond au survol */
+}
+
+```
+
+Ici nous avons ajouté une transition sur le bouton d'ajout de tâche. Cela permet d'ajouter un effet d'animation lorsque le bouton est survolé par la souris.
+
+6 - Ajout d'une couleur spécfique pour le bouton de suppression de tâche :
+
+```css
+button#deleteTask {
+    background-color: #e74c3c;
+}
+button#deleteTask:hover {
+    background-color: #c0392b;
+}
+```
+
+Comme nous avons déjà défini un style pour tous les boutons, nous devons ajouter un sélecteur CSS spécifique pour le bouton de suppression de tâche. Nous utilisons donc l'identifiant `#deleteTask` pour cibler ce bouton en particulier.
+
+Voilà ! Vous avez maintenant une liste de tâches avec un style plus attrayant 😍
+
+N'hésitez pas à expérimenter davantage en continuant de jouer avec les valeurs des propriétés CSS et en observant comment elles affectent l'apparence de votre liste de tâches.
